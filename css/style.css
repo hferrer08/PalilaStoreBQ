@@ -1,0 +1,360 @@
+/* INDEX */
+
+/* reset */
+*{  
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* background y font en body */
+
+body{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    font-family: 'Saira Condensed', sans-serif;
+    
+}
+
+     
+/* grilla contenedor pagina */
+
+/* vista desktop */
+
+@media screen and (min-width: 768px){
+
+#grillaContenedor{
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "nav logo redes"
+    ". flexCatalogo redes"
+    ". footer .";
+
+    grid-template-rows: 40px 400px 1fr 100px;
+    grid-template-columns: 220px 1fr 150px;
+    height:100vh;
+    grid-gap: 10px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+}
+/* vista movil */
+
+@media screen and (max-width: 768px){
+ #grillaContenedor{
+    grid-template-areas: 
+    "header header header "
+    ". logo ."
+
+ }
+
+ul{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ul li{
+    border-radius: 20px;
+}
+    /* 
+    OTRA OPCION DE RESPONSIVE
+    #header{
+        grid-column: 1/ -1;
+        
+    }
+   
+   #logo{
+       grid-column: 1 / -1;
+        
+   }*/
+
+/* .nav{
+    grid-column: 1/-1;
+} */
+
+
+ #footer{
+     display: none;
+ }
+ .navegadorFlex{
+   
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    
+    }
+}
+
+
+    
+    
+    
+/* encabezado promocion index */
+
+#header{
+grid-area: header;
+
+background-color:plum;
+align-self: center;
+flex-wrap: wrap;
+
+}
+
+/* pie de pagina index */
+
+#footer{
+    grid-area: footer;
+    justify-self:center;
+    
+
+}
+
+/* seccion logo y texto */
+
+#logo{
+    grid-area: logo;
+    
+    
+}
+
+
+/* catalogo en flex */
+
+#flexCatalogo{
+    grid-area:flexCatalogo;
+}
+
+/* navegador izquierda */
+
+nav{
+    grid-area: nav;
+    
+}
+
+
+/* espacio redes sociales derecha */
+
+#redes{
+    grid-area:redes;
+    
+}
+
+/* navegador izquierda */
+
+.navegadorFlex{
+margin-top: 40px;
+display:flex;
+flex-direction: column;
+text-align: center;
+justify-content: stretch;
+
+}
+
+/* lista a la izquierda */
+
+.listaizq{
+    
+    list-style-type: none;
+
+    font-size:  20px;
+    padding: 30px;
+    border: solid 1px aliceblue;
+    background-color:plum;
+      
+    
+}
+.bordesRedondeados{
+    border-radius: 30px;
+}
+
+
+/* Imagen del logo palila */
+#imgLogo{
+  width: 250px;
+}
+
+/* posicion lista de redes sociales */
+
+.posicionRedes{
+    position: fixed;
+    top: 200px;
+    right:20px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Estilos de lista de redes sociales derecha */
+
+.listaRedes{
+    list-style-type: none;
+    width: 70px;
+    height: 200px;
+    
+    background: rgb(238,174,202);
+ 
+}
+
+/* imagenes iconos */
+
+.icon{
+    width: 60px;
+    height: 60px;
+}
+
+/* texto de encabezado */
+
+.textoHeader{
+    font-size: larger;
+    font-style: italic;
+    color:darkslateblue;
+    font-size: medium;
+   
+}
+
+/* texto en seccion logo y texto */
+
+.textoPrincipal{
+    font-size: larger;
+    color:black;
+
+    
+}
+
+/* lista seccion centro en flex */
+.listaOpciones{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    padding: 30px;
+    font-size: 30px;
+    justify-content: space-evenly;
+    background-color:bisque;}
+
+/* HTML 2CATALOGO HOMBRE */
+
+
+/* vista desktop */
+@media screen and (min-width: 768px){
+#grillaContenedorHombre{
+    display:grid;
+    grid-template-areas: 
+    "headerHombre headerHombre headerHombre"
+    "sectionHombre sectionHombre sectionHombre"
+    ". footerHombre .";
+
+
+
+    grid-template-rows: 80px 450px 1fr;
+    grid-template-columns: 220px 1fr 150px;
+    height:100vh;
+    grid-gap: 10px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+   
+    
+   
+}
+}
+
+
+/* vista movil */
+@media screen and (max-width: 768px){
+    #grillaContenedorHombre{
+        display:grid;
+        grid-template-areas: 
+        "headerHombre "
+        "sectionHombre "
+        "footerHombre";
+      
+      grid-template-columns: auto ;
+      grid-template-rows: auto auto auto;
+       
+    }
+    ul{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #footerHombre{
+display: none;
+    }
+    }
+
+
+/* encabezado promocion hombre */
+
+#headerHombre{
+    grid-area: headerHombre;
+    flex-wrap: wrap;
+    
+
+    
+    }
+    
+    /* pie de pagina hombre */
+    
+    #footerHombre{
+        grid-area: footerHombre;
+       
+    
+    }
+    
+    /* seccion Hombre*/
+    
+    #sectionHombre{
+        grid-area: sectionHombre;
+      
+       
+        
+    }
+    
+    
+
+    
+    /* navegador center Hombre */
+    
+
+    
+    .navHombre{
+       
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        }
+/* grilla contenedor de pagina hombre */
+        #grillaContenedorGaleriaHombre{
+            display:grid;
+                  
+        
+            grid-template-rows: repeat(4, auto);
+            grid-template-columns: repeat(3, auto) ;
+            grid-gap: 10px;
+            justify-content: center;
+                    
+            
+           
+        }
+/* imagenes catalogo */
+        .imgCatalogo{
+width: 120px;
+height: 120px;
+
+        }
+
+       
+            
+          
