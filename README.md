@@ -1,1 +1,2 @@
-# PalilaStoreBQ ##Desafio usando grids y flexbox
+# PalilaStoreBQ 
+##Desafio usando grids y flexbox
